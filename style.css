@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root {
+    --primary-color: #f6d30d;
+  }
+body{
+    background: #292929;
+    font-family: 'Open Sans', sans-serif;
+    color:#494848;
+}
+a{
+    color:var(--primary-color);  
+}
+img{
+    max-width:100%;
+}
+.wrapper{
+    width:960px;
+    margin:auto;
+}
+nav{
+    display:flex;
+    align-items: center;
+    padding:15px 10px;
+}
+.logo{
+    background:red url(img/logo.png) no-repeat center center;
+    background-size: cover;
+    display: block;
+    width:70px;
+    height:70px;
+    text-indent:-9999px;
+    border-radius:50%;
+}
+.toggleMenu{
+    display:none;
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    color:white;
+    margin-left:auto;
+}
+nav li{ margin:0 15px;}
+nav ul a{
+    color:var(--primary-color);  
+    text-decoration: none; 
+    text-transform: uppercase;
+ 
+}
+.hero1{
+    display:none;
+}
+.blog{
+    margin:30px 0;
+    display:flex;
+    justify-content: space-between;
+}
+.blog article{
+    width: 290px;    
+    background: #fff;
+    position: relative;  
+}
+.blog div{
+    padding:30px;  
+}
+.blog p{
+    padding-bottom:40px;
+}
+.btn{
+    background:var(--primary-color);
+    color:#494848;
+    text-decoration: none;
+    display:block;
+    text-align: center;
+    padding:8px; 
+    position: absolute;  
+    bottom:30px;
+    width:calc(100% - 80px);  
+}
+.edito{
+    background: #fff;
+    display:flex;
+}
+.edito div{
+    padding:40px;
+}
+footer{
+    display:flex;
+    background: #fff;
+    margin:30px 0;
+}
+footer div{
+    padding:30px;
+}
+footer a{
+    display:block;
+    line-height:27px;
+}
+
+.subFooter{
+    color:#838383;
+}
+
+@media (max-width:1024px){
+
+    .wrapper{
+        width:768px;
+    }
+    .blog article{
+        width: 230px;   
+    }
+
+}
+@media (max-width:768px){
+    .toggleMenu{
+        display:block;
+        margin-left:auto;
+        
+    }
+    nav ul{
+        display:none;
+    }
+
+    .wrapper{
+        width:320px;
+    }
+    .hero0{
+        display:none;
+    }
+    .hero1{
+        display: block;
+    }
+    .blog,.edito,footer{
+        flex-direction: column;
+    }
+    .blog img{
+        width:100%;
+    }
+    .blog article{
+        margin-bottom:40px;
+        width: 320px;   
+    }
+
+    .edito div{
+        order:2;
+    }
+
+
+}
